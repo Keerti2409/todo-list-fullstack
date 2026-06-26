@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A premium, glassmorphic Full Stack Todo List Web Application built with Node.js, Express, MongoDB, and Mongoose.">
+  <title>AetherTasks - Modern Todo List</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Decorative background glow elements -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <div class="container">
+    <header class="app-header">
+      <h1 class="app-title">AetherTasks</h1>
+      <p class="app-subtitle">Streamline your daily workflow</p>
+    </header>
+
+    <!-- Stats Dashboard -->
+    <section class="stats-dashboard" aria-label="Task Statistics">
+      <div class="stat-card" id="stat-total-card">
+        <div class="stat-icon-wrapper total-icon">
+          <i class="fa-solid fa-list-check"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">Total Tasks</span>
+          <span class="stat-value" id="total-count">0</span>
+        </div>
+      </div>
+
+      <div class="stat-card" id="stat-pending-card">
+        <div class="stat-icon-wrapper pending-icon">
+          <i class="fa-solid fa-clock"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">Pending</span>
+          <span class="stat-value" id="pending-count">0</span>
+        </div>
+      </div>
+
+      <div class="stat-card" id="stat-completed-card">
+        <div class="stat-icon-wrapper completed-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">Completed</span>
+          <span class="stat-value" id="completed-count">0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Todo Container -->
+    <main class="todo-card">
+      <!-- Input Section -->
+      <form id="todo-form" class="todo-input-group">
+        <div class="input-wrapper">
+          <i class="fa-solid fa-plus input-icon"></i>
+          <input type="text" id="todo-input" placeholder="Add a new task..." required autocomplete="off" maxlength="100">
+        </div>
+        <button type="submit" id="add-btn" class="btn btn-primary">
+          <span>Add Task</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+
+      <!-- Loading and Empty States -->
+      <div id="loading-state" class="loading-state hidden">
+        <div class="spinner"></div>
+        <p>Loading your tasks...</p>
+      </div>
+
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon-wrapper">
+          <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </div>
+        <h3>No tasks yet</h3>
+        <p>Type a task above and click "Add Task" to get started.</p>
+      </div>
+
+      <!-- Todo List -->
+      <ul id="todo-list" class="todo-list">
+        <!-- Tasks will be dynamically injected here -->
+      </ul>
+    </main>
+
+    <footer class="app-footer">
+      <p>AetherTasks &copy; 2026. Powered by Node.js & MongoDB.</p>
+    </footer>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Client Script -->
+  <script src="script.js"></script>
+</body>
+</html>
