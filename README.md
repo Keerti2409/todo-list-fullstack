@@ -88,7 +88,14 @@ mongodb://127.0.0.1:27017/todoDB
 
 ## 📸 Screenshots
 
-Add screenshots of the application here.
+<img width="1348" height="629" alt="image" src="https://github.com/user-attachments/assets/cd3fc70d-1b7c-4989-8165-8f3513bc9dbf" />
+<img width="1345" height="637" alt="image" src="https://github.com/user-attachments/assets/a2fa0bdf-4e76-43b2-85d6-b374bcbc4a62" />
+<img width="1353" height="612" alt="image" src="https://github.com/user-attachments/assets/f8f07bf0-e0db-496b-b120-c6dae56ef94d" />
+
+
+
+
+
 
 ## 👩‍💻 Author
 
